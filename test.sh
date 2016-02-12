@@ -13,9 +13,17 @@ echo "argument 5 is $5"
 
 for i in $@
 do
-    if [ $i = "-h" ];then
-	echo "this should be helpful... sorry"
-    elif [ $i = "-r" ];then
-	echo "rekking your system"
-    fi
+#    if [ $i = "-h" ];then
+#	echo "this should be helpful... sorry"
+#    elif [ $i = "-r" ];then
+#	echo "rekking your system"
+#    fi
+case $i in
+-h)
+    echo "-h help command right?"
+;;
+-r)
+    echo "get rekt"
+;;
+esac
 done
